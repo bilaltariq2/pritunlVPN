@@ -7,7 +7,7 @@
 ## 3. VPN Server Deployment
 Pritunl supports different Linux distribtutions.<br>
 ***To install Pritunl VPN on Ubuntu 20.04:***
-```
+```bash
 sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list << EOF
 deb https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse
 EOF
@@ -26,7 +26,7 @@ sudo systemctl start pritunl mongod
 sudo systemctl enable pritunl mongod
 ```
 ***To install Pritunl VPN on Ubuntu 22.04:***
-```
+```bash
 sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list << EOF
 deb https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse
 EOF
@@ -44,3 +44,19 @@ sudo apt --assume-yes install pritunl mongodb-org
 sudo systemctl start pritunl mongod
 sudo systemctl enable pritunl mongod
 ```
+After installing no setup is necessary, simply open the web interface at https://SERVER_IP/ in your web browser.<br>
+To get the server IP
+```bash
+ip addr
+```
+To get the default password
+```bash
+sudo pritunl default-password
+```
+## 4. Post Installation Seteup
+Once you are successfully logged in, you can either edit the following details or setup them later:
++ Username
++ New Password
++ Public IP Address
++ Web Console Port
+If you good to go, simply click **Save**
