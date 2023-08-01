@@ -1,1 +1,1 @@
-# pritunlVPN
+# Getting started with pritunl VPN
